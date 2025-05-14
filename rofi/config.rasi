@@ -1,0 +1,7 @@
+@import "catppuccin-macchiato"
+@theme "catppuccin-default"
+configuration{
+  modi: "window,drun,ssh,combi,filebrowser,run,windowcd";
+  combi-modi:"window,drun,ssh";
+
+}

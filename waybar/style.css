@@ -1,0 +1,67 @@
+@define-color background rgba(25,27,41,0.40);
+@define-color foreground rgba(245, 245, 245, 0.4);
+@define-color font rgba(255,255,255,0.95);
+
+
+* {
+  font-size: 15px;
+  font-family:JetBrains Mono;
+}
+window#waybar{
+  all:unset;
+  background-color: @background;
+  border-radius: 5px;
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin-top: 0px;
+    margin-bottom: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none; 
+}
+
+.modules-left {
+    padding:10px;
+}
+.modules-center {
+    padding:10px;
+    min-width: 150.5px;
+}
+.modules-right {
+    padding:10px;
+}
+
+
+#workspaces {
+    padding: 0px 5px;
+}
+#workspaces button {
+    all:unset;
+    margin: 0px 3px;    
+    padding: 0px 2px;
+    color:rgba(0,0,0,0);
+    background: @font;
+    border-radius: 10%;
+    transition: all .3s;
+    min-width: 15px;
+}
+#workspaces button:hover {
+    color:rgba(0,0,0,0);
+    border: none;
+    background: @font;
+}
+#workspaces button.active {
+    border: none;
+    padding: 0px 2px;
+    border-radius:10px;
+    background: @font;
+    min-width: 30px;
+}
+
+#custom-logo, #custom-files, #custom-apps, #custom-view, #custom-edit, #custom-window, #wireplumber, #battery, #network, #custom-search, #custom-bluetooth, #custom-tweaks, #custom-date, #clock, #custom-power{
+  padding: 0px 5px;
+  transition: all .3s ease;
+  color:#ffffff;
+}
+

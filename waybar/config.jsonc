@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "margin": "5px",
+  "modules-left": ["custom/logo","custom/files","custom/apps","hyprland/language","battery"],
+  "modules-center": ["custom/wayves"],
+  "modules-right": ["wireplumber","network","custom/search","custom/bluetooth","custom/date","clock","custom/power"],
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": [ 1,2,3,4,5 ]
+    }
+  },
+  "custom/logo": {
+    "format": " 󰣇  ",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh"
+  },
+  "custom/files": {
+    "format": " File",
+    "on-click": "rofi -show filebrowser"
+  },
+  "custom/apps": {
+    "format": " Apps ",
+    "on-click": "rofi -show drun"
+  },
+  "custom/view": {
+    "format": " View "
+  },
+  "custom/edit": {
+    "format": " Edit "
+  },
+  "custom/window": {
+    "format": " Window ",
+    "on-click": "grim -g '$slurp'"
+  },
+  "wireplumber": {
+    "format":"{icon} {volume}%",
+    "format-muted":"  {volume}%",
+    "format-icons":[" ", " ", "  "],
+    "tooltip":false,
+    "on-click":"pavucontrol"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "format": " {capacity}%",
+    "format-charging": "{capacity}% charging",
+    "interval": 1,
+    "class": "power"
+  },
+  "network": {
+    "format-wifi": " ",
+    "on-click": "kitty nmtui",
+    "tooltip": false
+  },
+  "custom-search": {
+    "format": "⌕ ",
+    "on-click": "rofi -show combi"
+  },
+  "custom/bluetooth": {
+    "fotmat": " ",
+    "on-click": "kitty bluetoothctl"
+  },
+  "custom/date": {
+    "format": " {}",
+    "tooltip": false,
+    "exec": "date '+%a %b %d'",
+    "interval": 60
+  },
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "interval": 1,
+    "tooltip":false
+  },
+  "custom/tweaks": {
+    "format": " ",
+    "on-click": "hyprsysteminfo"
+  },
+  "custom/wayves": {
+    "format": "{}",
+    "exec": "python /home/mr/.config/waybar/wayves/wayves.py"
+  },
+          "hyprland/language":{
+            "format":"{}",
+            "format-en":"English",
+            "format-ru":"Russian"
+        }
+}
